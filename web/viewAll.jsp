@@ -11,13 +11,60 @@
 <html>
 <head>
     <title>Query result</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        h1{
+            font-family: "Corsiva Hebrew";
+        }
+        h2{
+            font-family: "Corsiva Hebrew";
+            margin-bottom: 0px;
+        }
+        div input[type=submit]{
+            border-radius: 4px;
+            border: black inset;
+        }
+        body{
+            width: available;
+        }
+        div{
+            text-align: center;
+        }
+        .bg{
+            background: black;
+            border: 2px inset steelblue;
+            color: white;
+        }
+        table,th,td{
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            border-collapse: separate;
+            border: 2px solid red;
+            font-family: "Andale Mono";
+            font-size: large;
+        }
+        td,th{
+            padding: 4px;
+        }
+        th{
+            font-family: "Corsiva Hebrew";
+            color: blue;
+            background: whitesmoke;
+        }
+        tr:hover {
+            background-color:#f5f5f5;
+        }
+    </style>
 </head>
-<h1 align="center">RESULT</h1>
-<br/>
-<table align="center" border="5px">
+<div class="jumbotron jumbotron-fluid bg">
+    <h1 class="display-4">RESULTS</h1>
+</div>
+
+<table>
     <tr>
-        <td align="center"><strong>URL</strong></td>
-        <td align="center"><strong>TINY URL</strong></td>
+        <th>URL</th>
+        <th>TINY URL</th>
     </tr>
     <%Iterator itr;%>
     <% List data= (List)request.getAttribute("result");
@@ -26,13 +73,15 @@
     %>
     <tr>
         <%URLs obj=(URLs) itr.next();%>
-        <td><u><%=obj.getUrl()%></u></td>
-        <td><u><%=obj.getId()%></u></td>
+        <td><%=obj.getUrl()%></td>
+        <td><%=obj.getId()%></td>
     </tr>
     <%}%>
 </table>
-<p align="center">
-    <a href="index.jsp">Home</a>
-</p>
+<div class="bg" style="margin-bottom: 0;position: fixed;bottom: 0;width: 100%;height: 100px">
+    <form action="index.jsp" method="get" style="position: absolute;top: 22px;width: 100%;margin-bottom: 0">
+        <input type="submit" value="HOME" class="btn btn-success btn-lg" style="width: 100%">
+    </form>
+</div>
 </body>
 </html>

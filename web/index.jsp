@@ -9,30 +9,66 @@
 <html>
 <head>
   <title>Web App</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    h1{
+      font-family: "Corsiva Hebrew";
+    }
+    h2{
+      font-family: "Corsiva Hebrew";
+      margin-bottom: 0px;
+    }
+    div input[type=submit]{
+      border-radius: 4px;
+      border: black inset;
+    }
+    body{
+      width: available;
+    }
+    div{
+      text-align: center;
+    }
+    .bg{
+      background: black;
+      border: 2px inset steelblue;
+      color: white;
+    }
+
+  </style>
 </head>
 <body>
-<h1 align="center">WEB APP</h1>
+<div class="jumbotron jumbotron-fluid bg">
+  <h1 class="display-4">URL CONVERTER</h1>
+</div>
 
-<p>
-<form action="UrlToTinyServlet" method="post">
-  <strong>URL: </strong>
-  <input type="text" name="url"/>
-  <input type="submit" value="submit">
-</form>
-</p>
-<p>
+  <form action="UrlToTinyServlet" method="post" >
+    <div class="form-group" style="margin: 5px">
+      <h2 style="text-align: left">URL:</h2>
+      <input type="text" name="url" class="form-control"/>
+    </div>
+    <div style="text-align: center;">
+      <input type="submit" value="Submit" class="btn btn-primary" style="margin-top: 5px">
+    </div>
+
+
+  </form>
+
 <form action="TinyToUrlServlet" method="get">
-  <strong>Tiny URL: </strong>
-  <input type="text" name="tiny"/>
-  <input type="submit" value="submit">
+  <div class="form-group" style="margin: 5px">
+    <h2 style="text-align: left">TINY URL:</h2>
+  <input type="text" name="tiny" class="form-control"/>
+  </div>
+  <div style="text-align: center;">
+    <input type="submit" value="Submit" class="btn btn-primary" style="margin-top: 5px">
+  </div>
 </form>
-</p>
-<p>
-<form action="DisplayAllServlet" method="get">
-  <strong>To view the database click here-></strong>
-  <input type="submit" value="View All">
-</form>
-</p>
+
+<div class="bg" style="margin-bottom: 0;position: fixed;bottom: 0;width: 100%;height: 100px">
+  <form action="DisplayAllServlet" method="get" style="position: absolute;top: 22px;width: 100%;margin-bottom: 0">
+      <input type="submit" value="Show Complete Database" class="btn btn-success btn-lg" style="width: 100%">
+  </form>
+</div>
+
 </body>
 </html>
 

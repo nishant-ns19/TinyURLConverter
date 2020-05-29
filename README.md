@@ -1,12 +1,12 @@
-###URL CONVERTER README
+### TINY URL CONVERTER README
 This is a small web app for shortening any given url.
 
-###TECH STACK
+### TECH STACK
 JAVA + SPRING BOOT
 MONGO DB
 JSP + CSS
 
-###SCREENSHOTS
+### SCREENSHOTS
 ![](screenshots/1.jpg)
 
 ![](screenshots/2.jpg)

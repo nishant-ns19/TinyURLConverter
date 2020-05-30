@@ -2,8 +2,8 @@
 This is a small web app for shortening any given url.
 
 ### TECH STACK
-JAVA + SPRING BOOT
-MONGO DB
+JAVA + SPRING BOOT <br/>
+MONGO DB <br/>
 JSP + CSS
 
 ### SCREENSHOTS
